@@ -7,7 +7,7 @@ function CartItem({item,value}){
 			<div className="row my-5 text-capitilize text-center">
 				
 				<div className="col-10 mx-auto col-lg-2">
-					<img src={img} style={{width:'5rem',height:'5rem'}} className="img-fluid" alt="product"/>
+					<img src={require(`../../${img}`)} style={{width:'5rem',height:'5rem'}} className="img-fluid" alt="product"/>
 				</div>
 				
 				<div className="col-10 mx-auto col-lg-2">

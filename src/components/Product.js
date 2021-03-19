@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 class Product extends Component{
 	render(){
 		const {id, title, img, price, inCart} = this.props.product;
-
 		return( 
 			<ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
 				<div className="card">
@@ -14,7 +13,7 @@ class Product extends Component{
 						{value=>(<div className="img-container p-5" onClick={()=>value.handleDetail(id)}>
 							<Link to="/details">
 
-								<img src={img} alt="product image" className="card-img-top"/>
+								<img src={require(`../${img}`)} alt="product image" className="card-img-top"/>
 							</Link>
 							<button className="cart-btn" 
 									onClick={()=>{value.addToCart(id); value.openModal(id)}} 
